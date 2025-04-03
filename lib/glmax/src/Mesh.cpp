@@ -111,6 +111,7 @@ void Mesh::load(const std::string& obj_path, const std::string& mtl_path)
 {
     std::string              relativePath = "../../assets/models/";
     tinyobj::ObjReaderConfig reader_config;
+    reader_config.triangulate = true;
     reader_config.mtl_search_path = relativePath + mtl_path;
 
     tinyobj::ObjReader reader;
